@@ -36,7 +36,6 @@ public class MainScreen extends JFrame {
 		this.addComponentListener(new ComponentAdapter() 
 		{  
 		        public void componentResized(ComponentEvent evt) {
-		            // Component c = (Component)evt.getSource();
 		            me.resizeIt(me.getWidth(), me.getHeight());
 		        }
 		});		
@@ -122,6 +121,7 @@ public class MainScreen extends JFrame {
 	    Dimension d = paintPanel.getSize();
 	    g.clearRect(0, 0, d.width, d.height);
         c.Draw(g, d.height, d.width);		
+        g.drawString("Noise: " + noiseText.getText(), 5, 15);
 	}
 
 	public static void main(String[] args) {
