@@ -5,10 +5,8 @@ import java.awt.Graphics;
 import java.util.Random;
 
 public class Drone {
-	public static int glevel = 0;
 	protected static Random rand = new Random();
 	
-	public int level;
 	public Drone parent;
 	public Drone left;
 	public Drone right;
@@ -26,7 +24,6 @@ public class Drone {
 	
 	public void Paint(Color color) {
 		if (this.color == null) {
-			level = ++glevel;
 			this.color = color;
 			if (parent != null) parent.Paint(mutate(color));
 			if (left != null)   left.Paint(mutate(color));
